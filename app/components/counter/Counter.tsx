@@ -5,7 +5,7 @@ import { useState } from "react";
 import {
   decrement,
   increment,
-  incrementAsync,
+  incrementAsync,  
   incrementByAmount,
   incrementIfOdd,
   selectCount,
@@ -36,6 +36,8 @@ export const Counter = () => {
         <span aria-label="Count" className={styles.value}>
           {count}
         </span>
+
+        {/*button for the screen  increasing by */}
         <button
           className={styles.button}
           aria-label="Increment value"
@@ -60,6 +62,7 @@ export const Counter = () => {
         >
           Add Amount
         </button>
+
         <button
           className={styles.asyncButton}
           disabled={status !== "idle"}
@@ -67,6 +70,7 @@ export const Counter = () => {
         >
           Add Async
         </button>
+
         <button
           className={styles.button}
           onClick={() => {

@@ -7,10 +7,10 @@ interface Context {
 
 export async function POST(request: NextRequest, context: Context) {
   const body: { amount: number } = await request.json();
-  const { amount = 1 } = body;
+  const { amount } = body;
 
   // simulate IO latency
-  await new Promise((resolve) => setTimeout(resolve, 500));
+  const result: number = await new Promise((resolve) => setTimeout(() => resolve(10), 500));
 
-  return NextResponse.json({ data: amount });
+  return NextResponse.json({ data: amount + result });
 }

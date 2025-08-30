@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
-import { Counter } from "./components/counter/Counter";
+import { GoGame } from "./components/gogame/GoGame";
 
 export default function IndexPage() {
-  return <Counter />;
+  return <GoGame />;
 }
 
 export const metadata: Metadata = {

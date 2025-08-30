@@ -5,7 +5,7 @@ import { fetchCount } from "./counterAPI";
 
 export interface CounterSliceState {
   value: number;
-  status: "idle" | "loading" | "failed";
+  status: "idle" | "loading" | "failed"; //union type
 }
 
 const initialState: CounterSliceState = {
